@@ -4,4 +4,9 @@
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li> <!-- passed in list into path so it can find the id -->
   <% end %>
-</ul>
+</ul><!-- Notice, too, that because we are in an each loop, we pass the object in as list instead of @list. -->
+
+
+<hr>
+<%= link_to "Lists", lists_path %> |
+<%= link_to "New List", new_list_path %>
