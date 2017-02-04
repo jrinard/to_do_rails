@@ -1,6 +1,7 @@
 <%= render('layouts/errors', :object => @task) %>
 
-<%= form_for [@list, @task] do |f| %><!-- pass in both the List object and the Task object, so it can create and save a new task, but you need to put them in an array because form_for expects only one argument --><% end %>
+<%= form_for [@list, @task] do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description %>
   <p><%= f.submit %></p>
+<% end %>

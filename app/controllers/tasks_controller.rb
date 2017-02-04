@@ -1,4 +1,10 @@
 class TasksController < ApplicationController
+
+  def new
+    @list = List.find(params[:list_id])
+    @task = @list.tasks.new
+  end
+
   def create
     @list = List.find(params[:list_id])
     @task = @list.tasks.new(task_params)
