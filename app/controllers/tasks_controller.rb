@@ -1,13 +1,5 @@
 class TasksController < ApplicationController
 
-
-
-
-
-
-
-
-
   def new
     @list = List.find(params[:list_id]) # getting id from list
     @task = @list.tasks.new # maping id/tasks/new
@@ -22,7 +14,6 @@ class TasksController < ApplicationController
       render :new
     end
   end
-
 
 
 
